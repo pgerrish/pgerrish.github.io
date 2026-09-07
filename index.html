@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Philip J. Gerrish — theoretical evolutionary genetics, evolution of sex, horizontal gene transfer, and predictive evolution.">
+  <meta name="author" content="Philip J. Gerrish">
+  <title>Philip J. Gerrish — Theoretical Evolutionary Genetics</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap nav-wrap">
+      <a class="wordmark" href="#top" aria-label="Philip J. Gerrish home">PJG</a>
+      <nav aria-label="Primary navigation">
+        <a href="#research">Research</a>
+        <a href="#work">Selected work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Theoretical evolutionary genetics</p>
+          <h1>Philip J. Gerrish</h1>
+          <p class="lede">I develop mathematical approaches to evolutionary dynamics, with current emphasis on the evolution of sex, horizontal gene transfer, and prediction in evolving populations.</p>
+          <div class="hero-links" aria-label="Primary links">
+            <a class="button" href="#research">Current research</a>
+            <a class="text-link" href="mailto:pgerrish@unm.edu">pgerrish@unm.edu</a>
+            <a class="text-link" href="https://github.com/pgerrish" rel="me">GitHub</a>
+          </div>
+        </div>
+
+        <div class="hero-figure" aria-label="Abstract research graphic showing selection, covariance, and a heavy-tailed response">
+          <svg viewBox="0 0 680 460" role="img" aria-labelledby="heroFigTitle heroFigDesc">
+            <title id="heroFigTitle">Selection, linkage, and scale</title>
+            <desc id="heroFigDesc">Three minimalist panels: two fitness peaks, host-plasmid covariance, and a heavy-tailed curve.</desc>
+            <g class="gridlines">
+              <line x1="42" y1="120" x2="638" y2="120"/>
+              <line x1="42" y1="230" x2="638" y2="230"/>
+              <line x1="42" y1="340" x2="638" y2="340"/>
+            </g>
+            <g class="panel panel-a">
+              <text x="48" y="62">fitness landscapes</text>
+              <path d="M58 190 C100 188, 120 88, 174 87 C225 86, 240 190, 282 190" />
+              <path d="M58 190 C120 190, 150 120, 214 120 C278 120, 308 190, 370 190" />
+              <line x1="176" y1="104" x2="214" y2="136" class="dash"/>
+              <text x="187" y="96" class="small">d</text>
+            </g>
+            <g class="panel panel-b">
+              <text x="398" y="62">host × mobile element</text>
+              <circle cx="420" cy="155" r="7"/>
+              <circle cx="454" cy="139" r="7"/>
+              <circle cx="486" cy="161" r="7"/>
+              <circle cx="516" cy="123" r="7"/>
+              <circle cx="547" cy="143" r="7"/>
+              <circle cx="580" cy="108" r="7"/>
+              <path d="M409 180 L588 92" class="dash"/>
+              <text x="432" y="206" class="small">cov(X,Y) &lt; 0</text>
+            </g>
+            <g class="panel panel-c">
+              <text x="48" y="284">rare trajectories dominate</text>
+              <line x1="60" y1="405" x2="332" y2="405" />
+              <line x1="60" y1="405" x2="60" y2="302" />
+              <path d="M73 319 C100 330, 124 343, 150 354 C187 370, 229 383, 315 398" />
+              <text x="252" y="368" class="small">~ 1/v</text>
+            </g>
+            <g class="panel panel-d">
+              <text x="398" y="284">scale → structure</text>
+              <circle cx="430" cy="350" r="17"/>
+              <circle cx="496" cy="326" r="13"/>
+              <circle cx="548" cy="374" r="15"/>
+              <circle cx="602" cy="332" r="10"/>
+              <line x1="445" y1="343" x2="484" y2="331"/>
+              <line x1="506" y1="336" x2="538" y2="365"/>
+              <line x1="560" y1="364" x2="592" y2="340"/>
+              <line x1="446" y1="357" x2="536" y2="374" class="dash"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section research-section" id="research">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">Current questions</p>
+          <h2>Where universal structure may make evolution predictable</h2>
+        </div>
+
+        <div class="research-grid">
+          <article class="research-card featured">
+            <span class="card-index">01</span>
+            <h3>Sex emerges at scale</h3>
+            <p>Recombination is often treated as a special biological mechanism in need of a special explanation. I am interested instead in whether selection itself produces recurrent, scale-dependent pressure for genetic mixing.</p>
+            <p class="card-note">Current themes: covariance, critical trajectories, heavy tails, non-equilibrium statistical mechanics, universality.</p>
+          </article>
+
+          <article class="research-card">
+            <span class="card-index">02</span>
+            <h3>Horizontal gene transfer</h3>
+            <p>Host and plasmid fitness can become antagonistically associated under vertical transmission. This creates a measurable selective pressure for reassortment by conjugation and other forms of horizontal transfer.</p>
+            <p class="card-note">Current themes: antibiotic resistance plasmids, HGT pressure, host–plasmid covariance, risk forecasting.</p>
+          </article>
+
+          <article class="research-card">
+            <span class="card-index">03</span>
+            <h3>Predictive evolution</h3>
+            <p>Evolution is contingent at the microscopic level, but some distributional features are robust. The goal is to identify observables that can be updated in real time and used for forward prediction without reconstructing the full fitness landscape.</p>
+            <p class="card-note">Current themes: distributions of fitness effects, Bayesian updating, extreme values, real-time forecasting.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section principle-section">
+      <div class="wrap principle-grid">
+        <div>
+          <p class="eyebrow">Working principle</p>
+          <h2>Prediction without microscopic omniscience</h2>
+        </div>
+        <blockquote>
+          Evolutionary detail is high-dimensional and contingent. Prediction becomes more plausible when we ask which coarse-grained quantities are stable to those details.
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="section work-section" id="work">
+      <div class="wrap">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Selected work</p>
+            <h2>Recent and foundational</h2>
+          </div>
+          <p class="heading-note">A short list rather than a complete bibliography.</p>
+        </div>
+
+        <div class="pub-list">
+          <article class="pub-item">
+            <div class="pub-year">2026</div>
+            <div>
+              <h3>Forecasting Evolution: Mining for Predictability in the Unpredictable</h3>
+              <p>Philip J. Gerrish, Ramiro Dominguez Aguilar &amp; Alexandre Colato. <em>Handbook of Visual, Experimental and Computational Mathematics</em>.</p>
+              <a href="https://ideas.repec.org/h/spr/sprchp/978-3-032-16368-4_12.html">publication</a>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <div class="pub-year">2022</div>
+            <div>
+              <h3>Natural selection promotes the evolution of recombination</h3>
+              <p>Two companion studies on recombination between the products of natural selection and during the selective process.</p>
+              <div class="inline-links">
+                <a href="https://doi.org/10.1101/2021.06.07.447320">part 1</a>
+                <a href="https://doi.org/10.1101/2021.06.07.447324">part 2</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <div class="pub-year">2017</div>
+            <div>
+              <h3>Dynamics and Fate of Beneficial Mutations Under Lineage Contamination by Linked Deleterious Mutations</h3>
+              <p>Sophie Pénisson, Tanya Singh, Paul Sniegowski &amp; Philip Gerrish. <em>Genetics</em> 205:1305–1318.</p>
+              <a href="https://academic.oup.com/genetics/article/205/3/1305/6066406">publication</a>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <div class="pub-year">2007</div>
+            <div>
+              <h3>Complete genetic linkage can subvert natural selection</h3>
+              <p>Philip J. Gerrish, Alexandre Colato, Alan S. Perelson &amp; Paul D. Sniegowski. <em>PNAS</em> 104:6266–6271.</p>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/17405865/">publication</a>
+            </div>
+          </article>
+
+          <article class="pub-item">
+            <div class="pub-year">1997–99</div>
+            <div>
+              <h3>Mutation supply, mutator evolution, and microbial adaptation</h3>
+              <p>Early experimental and theoretical work on the evolution of mutation rates, competing beneficial mutations, and diminishing returns from mutation supply.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="wrap about-grid">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2>Mathematical biology across scales</h2>
+        </div>
+        <div class="about-copy">
+          <p>I work at the interface of population genetics, probability, and statistical mechanics. Much of my research asks whether apparently idiosyncratic evolutionary processes contain coarse-grained regularities that can be measured, explained, and eventually used for prediction.</p>
+          <p>My work has included mutation-rate evolution, clonal interference, genetic linkage, distributions of fitness effects, real-time evolutionary forecasting, recombination, and horizontal gene transfer.</p>
+          <dl class="affiliations">
+            <div>
+              <dt>University of New Mexico</dt>
+              <dd>Department of Biology · Albuquerque, New Mexico</dd>
+            </div>
+            <div>
+              <dt>Universidad Autónoma del Estado de Hidalgo</dt>
+              <dd>Department of Mathematics and Physics · Hidalgo, Mexico</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Research correspondence</h2>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:pgerrish@unm.edu">pgerrish@unm.edu</a>
+          <a href="https://github.com/pgerrish">github.com/pgerrish</a>
+          <a href="https://github.com/pgerrish/HGT_proposal">HGT proposal repository</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <p>Philip J. Gerrish</p>
+      <p>Theoretical evolutionary genetics</p>
+      <p class="footer-meta">Static HTML · no tracking · no framework</p>
+    </div>
+  </footer>
+</body>
+</html>
