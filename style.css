@@ -279,6 +279,91 @@ blockquote {
 .footer-grid p { margin: 0; }
 .footer-meta { text-align: right; }
 
+
+
+.feature-section {
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--paper-2) 58%, var(--paper) 42%), var(--paper));
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1.02fr .98fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: center;
+}
+.feature-copy h2 {
+  font-family: var(--serif);
+  font-size: clamp(2.6rem, 5.5vw, 5.2rem);
+  font-weight: 400;
+  line-height: .98;
+  letter-spacing: -.04em;
+  margin-bottom: 1.3rem;
+}
+.feature-lede {
+  font-family: var(--serif);
+  font-size: clamp(1.18rem, 2.1vw, 1.7rem);
+  line-height: 1.42;
+  margin-bottom: 1.2rem;
+}
+.feature-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin: 1.8rem 0 1.4rem;
+}
+.feature-points {
+  margin: 1.2rem 0 0;
+  padding-left: 1.2rem;
+}
+.feature-points li { margin-bottom: .8rem; }
+.feature-figure {
+  margin: 0;
+  padding: 1.25rem;
+  border: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--paper) 78%, white 22%);
+}
+.feature-figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.feature-figure figcaption {
+  margin-top: .9rem;
+  font-size: .92rem;
+  color: var(--muted);
+}
+.feature-figure .frame {
+  fill: none;
+  stroke: var(--rule);
+  stroke-width: 1.4;
+}
+.feature-figure text {
+  font: 600 18px var(--sans);
+  fill: var(--ink);
+  letter-spacing: .01em;
+}
+.feature-figure .small {
+  font-size: 13px;
+  font-weight: 400;
+  fill: var(--muted);
+}
+.feature-figure line,
+.feature-figure path,
+.feature-figure circle {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+.feature-figure circle { fill: var(--paper); }
+.feature-figure .dash { stroke-dasharray: 5 6; stroke-width: 1.45; }
+.feature-figure .light { stroke-width: 1.25; stroke-dasharray: 3 7; }
+.feature-figure .feature-axis line { stroke: var(--rule); stroke-width: 1; }
+
+@media (max-width: 920px) {
+  .feature-grid { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 920px) {
   .hero-grid,
   .principle-grid,

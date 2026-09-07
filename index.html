@@ -16,6 +16,7 @@
     <div class="wrap nav-wrap">
       <a class="wordmark" href="#top" aria-label="Philip J. Gerrish home">PJG</a>
       <nav aria-label="Primary navigation">
+        <a href="#featured-project">Featured</a>
         <a href="#research">Research</a>
         <a href="#work">Selected work</a>
         <a href="#about">About</a>
@@ -90,6 +91,77 @@
       </div>
     </section>
 
+
+
+    <section class="section feature-section" id="featured-project">
+      <div class="wrap feature-grid">
+        <div class="feature-copy">
+          <p class="eyebrow">Featured project</p>
+          <h2>Sex emerges at scale</h2>
+          <p class="feature-lede">The central claim is that sex and recombination need not be explained as exceptional biological add-ons. Natural selection itself can generate the negative associations that make genetic mixing advantageous, and at large scales the resulting selective response is dominated by rare, near-critical trajectories.</p>
+          <p>This program connects covariance, heavy-tailed sex potential, path ensembles, and nonequilibrium statistical mechanics. It also asks why non-additive fitness becomes progressively less consequential under coarse-graining, making universal structure visible above the microscopic details.</p>
+          <div class="feature-links">
+            <a class="button" href="https://doi.org/10.1101/2020.08.28.271486">Main preprint</a>
+            <a class="text-link" href="https://doi.org/10.1101/2021.06.07.447320">Part 1</a>
+            <a class="text-link" href="https://doi.org/10.1101/2021.06.07.447324">Part 2</a>
+          </div>
+          <ul class="feature-points">
+            <li><strong>Key idea:</strong> natural selection creates the associations that favor recombination.</li>
+            <li><strong>Mathematical signature:</strong> sex potential has a heavy tail, with rare trajectories contributing disproportionately.</li>
+            <li><strong>Broader aim:</strong> place the evolution of sex within a general statistical mechanics of adaptation.</li>
+          </ul>
+        </div>
+
+        <figure class="feature-figure">
+          <svg viewBox="0 0 760 520" role="img" aria-labelledby="sexScaleTitle sexScaleDesc">
+            <title id="sexScaleTitle">Sex emerges at scale</title>
+            <desc id="sexScaleDesc">A minimalist diagram showing selection generating negative covariance, rare trajectories creating a heavy tail, and recombination becoming favored at scale.</desc>
+            <rect x="1" y="1" width="758" height="518" rx="20" ry="20" class="frame"/>
+            <g class="feature-axis">
+              <line x1="62" y1="144" x2="338" y2="144"/>
+              <line x1="62" y1="250" x2="338" y2="250"/>
+              <line x1="62" y1="356" x2="338" y2="356"/>
+              <line x1="450" y1="120" x2="450" y2="406"/>
+              <line x1="450" y1="406" x2="690" y2="406"/>
+            </g>
+            <g class="feature-panel">
+              <text x="62" y="54">selection generates associations</text>
+              <circle cx="102" cy="102" r="7"/>
+              <circle cx="138" cy="128" r="7"/>
+              <circle cx="174" cy="144" r="7"/>
+              <circle cx="210" cy="162" r="7"/>
+              <circle cx="246" cy="186" r="7"/>
+              <circle cx="282" cy="214" r="7"/>
+              <path d="M90 92 L294 224" class="dash"/>
+              <text x="110" y="232" class="small">cov(X,Y) &lt; 0</text>
+            </g>
+            <g class="feature-panel">
+              <text x="62" y="286">rare trajectories dominate</text>
+              <path d="M468 168 C497 192, 522 221, 549 246 C579 275, 617 315, 676 390"/>
+              <path d="M466 186 C499 215, 530 246, 560 279 C596 316, 628 349, 676 392" class="light"/>
+              <text x="592" y="236" class="small">P(V &gt; v) ~ 1/v</text>
+              <text x="592" y="257" class="small">heavy-tailed response</text>
+            </g>
+            <g class="feature-panel">
+              <text x="62" y="392">recombination favored at scale</text>
+              <circle cx="110" cy="440" r="18"/>
+              <circle cx="180" cy="438" r="18"/>
+              <circle cx="250" cy="440" r="18"/>
+              <circle cx="145" cy="472" r="18"/>
+              <circle cx="215" cy="472" r="18"/>
+              <line x1="125" y1="448" x2="165" y2="448"/>
+              <line x1="196" y1="447" x2="235" y2="447"/>
+              <line x1="123" y1="451" x2="145" y2="468" class="dash"/>
+              <line x1="182" y1="452" x2="212" y2="467" class="dash"/>
+              <text x="300" y="448" class="small">selection → covariance → sex potential</text>
+              <text x="300" y="472" class="small">microscopic detail, macroscopic regularity</text>
+            </g>
+          </svg>
+          <figcaption>A schematic summary of the current recombination program.</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section class="section research-section" id="research">
       <div class="wrap">
         <div class="section-heading">
@@ -128,49 +200,103 @@
           <p class="eyebrow">Working principle</p>
           <h2>Prediction without microscopic omniscience</h2>
         </div>
-        <blockquote>Evolutionary detail is high-dimensional and contingent. Prediction becomes more plausible when we ask which coarse-grained quantities are stable to those details.</blockquote>
+        <blockquote>
+          Evolutionary detail is high-dimensional and contingent. Prediction becomes more plausible when we ask which coarse-grained quantities are stable to those details.
+        </blockquote>
       </div>
     </section>
 
     <section class="section work-section" id="work">
       <div class="wrap">
         <div class="section-heading split-heading">
-          <div><p class="eyebrow">Selected work</p><h2>Recent and foundational</h2></div>
+          <div>
+            <p class="eyebrow">Selected work</p>
+            <h2>Recent and foundational</h2>
+          </div>
           <p class="heading-note">A short list rather than a complete bibliography.</p>
         </div>
 
         <div class="pub-list">
           <article class="pub-item">
             <div class="pub-year">2026</div>
-            <div><h3>Forecasting Evolution: Mining for Predictability in the Unpredictable</h3><p>Philip J. Gerrish, Ramiro Dominguez Aguilar &amp; Alexandre Colato. In <em>Handbook of Visual, Experimental and Computational Mathematics</em>, pp. 109–134, Springer.</p><a href="https://doi.org/10.1007/978-3-032-16368-4_12">publication</a></div>
+            <div>
+              <h3>Forecasting Evolution: Mining for Predictability in the Unpredictable</h3>
+              <p>Philip J. Gerrish, Ramiro Dominguez Aguilar &amp; Alexandre Colato. In <em>Handbook of Visual, Experimental and Computational Mathematics</em>, pp. 109–134, Springer.</p>
+              <a href="https://doi.org/10.1007/978-3-032-16368-4_12">publication</a>
+            </div>
           </article>
+
           <article class="pub-item">
             <div class="pub-year">2025</div>
-            <div><h3>Natural selection and the evolution of recombination</h3><p>A current line of work developing the claim that natural selection itself generates the associations that favor recombination.</p><div class="inline-links"><a href="https://doi.org/10.1101/2020.08.28.271486">advantage of recombination</a><a href="https://doi.org/10.1101/2021.06.07.447320">between products of selection</a><a href="https://doi.org/10.1101/2021.06.07.447324">during selection</a></div></div>
+            <div>
+              <h3>Natural selection and the evolution of recombination</h3>
+              <p>A current line of work developing the claim that natural selection itself generates the associations that favor recombination.</p>
+              <div class="inline-links">
+                <a href="https://doi.org/10.1101/2020.08.28.271486">advantage of recombination</a>
+                <a href="https://doi.org/10.1101/2021.06.07.447320">between products of selection</a>
+                <a href="https://doi.org/10.1101/2021.06.07.447324">during selection</a>
+              </div>
+            </div>
           </article>
+
           <article class="pub-item">
             <div class="pub-year">2021</div>
-            <div><h3>Why are viral genomes so fragile? The bottleneck hypothesis</h3><p>N. S. C. Merleau, S. Pénisson, P. J. Gerrish, S. F. Elena &amp; M. Smerlak. <em>PLoS Computational Biology</em> 17:e1009128.</p><a href="https://doi.org/10.1371/journal.pcbi.1009128">publication</a></div>
+            <div>
+              <h3>Why are viral genomes so fragile? The bottleneck hypothesis</h3>
+              <p>N. S. C. Merleau, S. Pénisson, P. J. Gerrish, S. F. Elena &amp; M. Smerlak. <em>PLoS Computational Biology</em> 17:e1009128.</p>
+              <a href="https://doi.org/10.1371/journal.pcbi.1009128">publication</a>
+            </div>
           </article>
+
           <article class="pub-item">
             <div class="pub-year">2017</div>
-            <div><h3>Dynamics and fate of beneficial mutations under lineage contamination by linked deleterious mutations</h3><p>S. Pénisson, T. Singh, P. D. Sniegowski &amp; P. J. Gerrish. <em>Genetics</em> 205:1305–1318.</p><a href="https://academic.oup.com/genetics/article/205/3/1305/6066406">publication</a></div>
+            <div>
+              <h3>Dynamics and fate of beneficial mutations under lineage contamination by linked deleterious mutations</h3>
+              <p>S. Pénisson, T. Singh, P. D. Sniegowski &amp; P. J. Gerrish. <em>Genetics</em> 205:1305–1318.</p>
+              <a href="https://academic.oup.com/genetics/article/205/3/1305/6066406">publication</a>
+            </div>
           </article>
+
           <article class="pub-item">
             <div class="pub-year">2012</div>
-            <div><h3>Real time forecasting of near-future evolution</h3><p>Philip J. Gerrish &amp; Paul D. Sniegowski. <em>Journal of the Royal Society Interface</em>.</p><a href="https://doi.org/10.1098/rsif.2012.0119">publication</a></div>
+            <div>
+              <h3>Real time forecasting of near-future evolution</h3>
+              <p>Philip J. Gerrish &amp; Paul D. Sniegowski. <em>Journal of the Royal Society Interface</em>.</p>
+              <a href="https://doi.org/10.1098/rsif.2012.0119">publication</a>
+            </div>
           </article>
+
           <article class="pub-item">
             <div class="pub-year">2001</div>
-            <div><h3>The rhythm of microbial adaptation</h3><p>Philip J. Gerrish. <em>Nature</em> 413:299–302.</p><a href="https://doi.org/10.1038/35095102">publication</a></div>
+            <div>
+              <h3>The rhythm of microbial adaptation</h3>
+              <p>Philip J. Gerrish. <em>Nature</em> 413:299–302.</p>
+              <a href="https://doi.org/10.1038/35095102">publication</a>
+            </div>
           </article>
+
           <article class="pub-item">
             <div class="pub-year">1999</div>
-            <div><h3>Clonal interference and mutation supply in asexual populations</h3><p>Early experimental and theoretical work showing how competition among beneficial mutations constrains adaptation in microbes and RNA viruses.</p><div class="inline-links"><a href="https://doi.org/10.1126/science.285.5434.1745">RNA viruses</a><a href="https://doi.org/10.1126/science.283.5400.404">mutation supply</a></div></div>
+            <div>
+              <h3>Clonal interference and mutation supply in asexual populations</h3>
+              <p>Early experimental and theoretical work showing how competition among beneficial mutations constrains adaptation in microbes and RNA viruses.</p>
+              <div class="inline-links">
+                <a href="https://doi.org/10.1126/science.285.5434.1745">RNA viruses</a>
+                <a href="https://doi.org/10.1126/science.283.5400.404">mutation supply</a>
+              </div>
+            </div>
           </article>
+
           <article class="pub-item">
             <div class="pub-year">1997–98</div>
-            <div><h3>Mutator evolution and competing beneficial mutations</h3><p>Foundational work on the evolution of high mutation rates and the fate of beneficial mutations in asexual populations.</p><div class="inline-links"><a href="https://doi.org/10.1038/42701">mutator evolution</a><a href="https://doi.org/10.1023/A:1017031208461">competing beneficial mutations</a></div></div>
+            <div>
+              <h3>Mutator evolution and competing beneficial mutations</h3>
+              <p>Foundational work on the evolution of high mutation rates and the fate of beneficial mutations in asexual populations.</p>
+              <div class="inline-links">
+                <a href="https://doi.org/10.1038/42701">mutator evolution</a>
+                <a href="https://doi.org/10.1023/A:1017031208461">competing beneficial mutations</a>
+              </div>
+            </div>
           </article>
         </div>
       </div>
@@ -178,15 +304,27 @@
 
     <section class="section about-section" id="about">
       <div class="wrap about-grid">
-        <div><p class="eyebrow">About</p><h2>Mathematical biology across scales</h2></div>
+        <div>
+          <p class="eyebrow">About</p>
+          <h2>Mathematical biology across scales</h2>
+        </div>
         <div class="about-copy">
           <p>I work at the interface of population genetics, probability, and statistical mechanics. Much of my research asks whether apparently idiosyncratic evolutionary processes contain coarse-grained regularities that can be measured, explained, and eventually used for prediction.</p>
           <p>My work has included mutation-rate evolution, clonal interference, genetic linkage, distributions of fitness effects, real-time evolutionary forecasting, recombination, horizontal gene transfer, and microbial evolution.</p>
           <p>I received my PhD in Zoology from Michigan State University, where I worked with Richard Lenski, after earlier training in biosystems engineering, physics, and philosophy.</p>
           <dl class="affiliations">
-            <div><dt>University of Michigan</dt><dd>Biological Sciences · Ann Arbor, Michigan</dd></div>
-            <div><dt>Universidad Autónoma del Estado de Hidalgo</dt><dd>Mathematics · Pachuca, Hidalgo, Mexico</dd></div>
-            <div><dt>University of New Mexico</dt><dd>Biology · Albuquerque, New Mexico</dd></div>
+            <div>
+              <dt>University of Michigan</dt>
+              <dd>Biological Sciences · Ann Arbor, Michigan</dd>
+            </div>
+            <div>
+              <dt>Universidad Autónoma del Estado de Hidalgo</dt>
+              <dd>Mathematics · Pachuca, Hidalgo, Mexico</dd>
+            </div>
+            <div>
+              <dt>University of New Mexico</dt>
+              <dd>Biology · Albuquerque, New Mexico</dd>
+            </div>
           </dl>
         </div>
       </div>
@@ -194,7 +332,10 @@
 
     <section class="section contact-section" id="contact">
       <div class="wrap contact-grid">
-        <div><p class="eyebrow">Contact</p><h2>Research correspondence</h2></div>
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Research correspondence</h2>
+        </div>
         <div class="contact-links">
           <a href="mailto:pgerrish@unm.edu">pgerrish@unm.edu</a>
           <a href="cv.html">Curriculum vitae</a>
@@ -206,7 +347,11 @@
   </main>
 
   <footer class="site-footer">
-    <div class="wrap footer-grid"><p>Philip J. Gerrish</p><p>Theoretical evolutionary genetics</p><p class="footer-meta">Static HTML · no tracking · no framework</p></div>
+    <div class="wrap footer-grid">
+      <p>Philip J. Gerrish</p>
+      <p>Theoretical evolutionary genetics</p>
+      <p class="footer-meta">Static HTML · no tracking · no framework</p>
+    </div>
   </footer>
 </body>
 </html>
