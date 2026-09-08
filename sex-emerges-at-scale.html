@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A detailed summary of Philip J. Gerrish's manuscript Sex emerges at scale.">
+  <meta name="author" content="Philip J. Gerrish">
+  <title>Sex emerges at scale — Article summary</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .article-hero { padding: 6.5rem 0 4.5rem; border-bottom: 1px solid var(--rule); }
+    .article-hero-grid { display:grid; grid-template-columns: .78fr 1.22fr; gap: clamp(3rem,7vw,7rem); align-items:end; }
+    .article-kicker { max-width: 330px; color: var(--muted); font-size: .96rem; }
+    .article-hero h1 { font-size: clamp(4rem, 9vw, 8.2rem); margin-bottom: 1.35rem; }
+    .article-deck { font-family: var(--serif); font-size: clamp(1.4rem,2.7vw,2.25rem); line-height:1.32; max-width: 930px; margin:0; }
+    .article-actions { display:flex; flex-wrap:wrap; gap:1rem; margin-top:1.8rem; }
+    .article-body { max-width: 980px; }
+    .article-body p { font-size: 1.08rem; }
+    .article-body .lead { font-family: var(--serif); font-size: clamp(1.35rem,2.2vw,1.8rem); line-height:1.45; }
+    .article-section { padding: 5rem 0; border-bottom: 1px solid var(--rule); }
+    .article-section h2 { font-family:var(--serif); font-size:clamp(2.5rem,5vw,4.8rem); font-weight:400; line-height:1.02; letter-spacing:-.035em; margin-bottom:1.5rem; }
+    .article-section h3 { font-family:var(--serif); font-size:clamp(1.65rem,2.8vw,2.45rem); font-weight:400; margin:2.8rem 0 1rem; }
+    .theorem-grid { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--ink); border-bottom:1px solid var(--ink); margin-top:2.5rem; }
+    .theorem-card { padding:1.5rem 1.5rem 1.8rem; border-right:1px solid var(--rule); }
+    .theorem-card:last-child { border-right:0; }
+    .theorem-no { font-size:.72rem; letter-spacing:.13em; text-transform:uppercase; color:var(--accent); font-weight:700; }
+    .theorem-card h3 { margin:.9rem 0 1rem; font-size:1.75rem; }
+    .formula { font-family:var(--serif); font-size:1.25rem; padding:1rem 1.2rem; background:var(--paper-2); border-left:3px solid var(--accent); margin:1.3rem 0; overflow-x:auto; }
+    .concept-strip { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--rule); border:1px solid var(--rule); margin:2.5rem 0; }
+    .concept-strip > div { background:var(--paper); padding:1.35rem; }
+    .concept-strip strong { display:block; font-family:var(--serif); font-size:1.25rem; margin-bottom:.45rem; font-weight:400; }
+    .concept-strip span { color:var(--muted); font-size:.9rem; }
+    .plot-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin:2rem 0 1rem; }
+    .plot-card { border:1px solid var(--rule); padding:1.1rem 1.1rem .9rem; background:color-mix(in srgb,var(--paper) 82%,white 18%); }
+    .plot-card h4 { margin:.2rem 0 .3rem; font-size:.78rem; text-transform:uppercase; letter-spacing:.1em; }
+    .plot-card p { margin:.2rem 0 .8rem; color:var(--muted); font-size:.9rem; }
+    .plot-card svg { display:block; width:100%; height:auto; }
+    .plot-card .axis { stroke:var(--ink); stroke-width:1.4; }
+    .plot-card .trend { stroke:var(--ink); stroke-width:3; fill:none; }
+    .plot-card .guide { stroke:var(--muted); stroke-width:1.2; stroke-dasharray:5 6; fill:none; }
+    .plot-card text { font: 13px var(--sans); fill:var(--muted); }
+    .plot-card .accent-text { fill:var(--accent); font-weight:700; }
+    .callout { margin:2.8rem 0; padding:2rem 2.2rem; background:var(--ink); color:var(--paper); }
+    .callout p { font-family:var(--serif); font-size:clamp(1.45rem,2.6vw,2.1rem); line-height:1.35; margin:0; }
+    .fineprint { color:var(--muted); font-size:.92rem; }
+    .article-footer-links { display:flex; flex-wrap:wrap; gap:1rem; align-items:center; margin-top:2rem; }
+    @media (max-width: 920px) {
+      .article-hero-grid, .plot-grid { grid-template-columns:1fr; }
+      .theorem-grid { grid-template-columns:1fr; }
+      .theorem-card { border-right:0; border-bottom:1px solid var(--rule); }
+      .theorem-card:last-child { border-bottom:0; }
+      .concept-strip { grid-template-columns:1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .article-hero { padding:4rem 0 3rem; }
+      .article-section { padding:3.5rem 0; }
+      .concept-strip { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap nav-wrap">
+      <a class="wordmark" href="index.html" aria-label="Philip J. Gerrish home">PJG</a>
+      <nav aria-label="Primary navigation">
+        <a href="index.html#featured-project">Featured</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#work">Selected work</a>
+        <a href="cv.html">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="article-hero">
+      <div class="wrap article-hero-grid">
+        <div>
+          <p class="eyebrow">Article summary</p>
+          <p class="article-kicker">A guided account of the current manuscript, emphasizing the large-scale argument and the three theorem-level results.</p>
+        </div>
+        <div>
+          <h1>Sex emerges at scale</h1>
+          <p class="article-deck">The paper argues that the ubiquity of sex becomes less mysterious when the object of explanation is changed: from individual microevolutionary mechanisms to an ensemble of evolutionary trajectories. At that scale, contingency recedes and a universal statistical pattern appears.</p>
+          <div class="article-actions">
+            <a class="button" href="https://doi.org/10.1101/2020.08.28.271486">bioRxiv preprint</a>
+            <a class="text-link" href="index.html#featured-project">Back to research</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-section">
+      <div class="wrap article-body">
+        <p class="eyebrow">The puzzle</p>
+        <h2>A large immediate cost, many small delayed gains</h2>
+        <p class="lead">Classical accounts of sex begin with an asymmetry. The costs of sex are conspicuous and immediate—genome dilution, mate finding, and the demographic cost of males—while the costs of asexuality arise incrementally through selective interference.</p>
+        <p>The manuscript groups the latter into two broad classes. <strong>Within-lineage interference</strong> includes Hill–Robertson interference and lineage contamination: beneficial alleles are less likely to fix, deleterious alleles are more likely to fix, and damaging mutations can accumulate irreversibly. <strong>Across-lineage interference</strong> includes Fisher–Muller interference and clonal interference: favorable alleles arising in different lineages compete because linkage prevents them from being assembled into the same genome.</p>
+        <p>Sex breaks linkage and can recover this lost efficiency. But the usual framing asks for a large benefit of sex capable of paying a large cost. The paper instead proposes that the relevant benefit is distributed across evolutionary time and across many interference episodes. The aggregate can be large even when the contribution from any one episode is small.</p>
+
+        <div class="concept-strip">
+          <div><strong>Local view</strong><span>One population, one path, one mechanism.</span></div>
+          <div><strong>Path ensemble</strong><span>A probability distribution over many possible selective histories.</span></div>
+          <div><strong>Scale change</strong><span>Contingent details are averaged over rather than explained one by one.</span></div>
+          <div><strong>Universal output</strong><span>Non-negative mean pressure, power-law surges, long correlations.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-section">
+      <div class="wrap article-body">
+        <p class="eyebrow">Core construction</p>
+        <h2>Sex potential is a property of a trajectory</h2>
+        <p>The central dynamical quantity is <strong>sex potential</strong>, defined as the potential fitness flux created by a selective-interference path. The manuscript adapts the fitness-flux framework of Mustonen and Lässig, but changes the level of description: sex potential is treated as a random variable over an ensemble of paths rather than as a value attached to one realized path.</p>
+        <p>Mean fitness is partitioned using an integrated Fisher–Ewens form of the fundamental theorem:</p>
+        <div class="formula"><em>L</em>(t) = <em>T</em>(t) − <em>V</em>(t), &nbsp;&nbsp; with &nbsp;&nbsp; <em>V</em>(t) = −2 ∫<sub>0</sub><sup>t</sup> cov(X,Y) du.</div>
+        <p>Here <em>T</em>(t) is cumulative variance-driven fitness flux and <em>V</em>(t) is the cumulative fitness flux that would be recovered by freely breaking linkage. Under free genetic exchange, the covariance term vanishes and mean fitness rises as <em>T</em>(t). Thus <em>V</em>(t) measures the cumulative opportunity for sex.</p>
+        <p>The asymptotic quantity <em>V</em><sup>*</sup> is the total sex potential of an episode. A dissociation parameter <em>r</em> extends the definition to <em>V</em><sub>r</sub><sup>*</sup>, spanning the range from sex-enabling genes that remain linked to the genome they modify to highly promiscuous modifiers that rapidly move among genomic backgrounds.</p>
+        <div class="callout"><p>The key conceptual move is that a genome can be locally well or poorly assembled, but the evolutionary fate of sex is determined by the statistics of many such assembly problems.</p></div>
+      </div>
+    </section>
+
+    <section class="article-section">
+      <div class="wrap">
+        <div class="article-body">
+          <p class="eyebrow">Three large-scale results</p>
+          <h2>The universal pattern</h2>
+          <p>The paper’s main claim is not simply that sex can be advantageous. It is that, under broad conditions, the <em>distribution</em> of selection for sex acquires a characteristic structure.</p>
+        </div>
+
+        <div class="theorem-grid">
+          <article class="theorem-card">
+            <div class="theorem-no">Theorem 1</div>
+            <h3>Non-negative in expectation</h3>
+            <p>The expected sex potential satisfies ⟨V<sub>r</sub><sup>*</sup>⟩ ≥ 0 for every dissociation rate <em>r</em>.</p>
+            <p class="fineprint">Matched combinations are removed quickly by selection; mismatched combinations persist longer and therefore contribute more strongly to the time-integrated covariance.</p>
+          </article>
+          <article class="theorem-card">
+            <div class="theorem-no">Theorem 2</div>
+            <h3>Heavy-tailed surges</h3>
+            <p>For most realistic conditions, P(V<sub>r</sub><sup>*</sup> &gt; v) ∼ v<sup>−1</sup>.</p>
+            <p class="fineprint">Large episodes arise near cancellation of total fitness differences, where selective relaxation is slow and the integrated opportunity for recombination becomes large.</p>
+          </article>
+          <article class="theorem-card">
+            <div class="theorem-no">Theorem 3</div>
+            <h3>Long correlations</h3>
+            <p>In the sex-enforcing limit, P(T &gt; t) ∼ t<sup>−1</sup> and P(X &gt; x) ∼ x<sup>−2</sup>.</p>
+            <p class="fineprint">The same near-neutral episodes that create large sex potential also generate long-lived and spatially extended domains of selection for sex.</p>
+          </article>
+        </div>
+
+        <div class="plot-grid wrap" style="width:min(calc(100% - 48px),1180px); margin-top:2.5rem;">
+          <figure class="plot-card">
+            <h4>Heavy tail of sex potential</h4>
+            <p>Schematic log–log CCDF. The manuscript predicts the generic universality class α = 1.</p>
+            <svg viewBox="0 0 520 320" role="img" aria-label="Log-log plot with a straight descending line of slope minus one">
+              <line class="axis" x1="62" y1="264" x2="474" y2="264"/>
+              <line class="axis" x1="62" y1="264" x2="62" y2="42"/>
+              <path class="trend" d="M92 72 L440 238"/>
+              <path class="guide" d="M270 138 L390 196"/>
+              <text x="378" y="180" class="accent-text">slope −1</text>
+              <text x="214" y="300">log sex potential, v</text>
+              <text transform="translate(20 212) rotate(-90)">log P(V* &gt; v)</text>
+              <text x="91" y="58">many modest episodes</text>
+              <text x="336" y="248">rare large surges</text>
+            </svg>
+          </figure>
+          <figure class="plot-card">
+            <h4>Near-neutrality amplifies opportunity</h4>
+            <p>As the total-fitness gap S = |ΔX + ΔY| approaches zero, the kernel grows approximately as 1/S.</p>
+            <svg viewBox="0 0 520 320" role="img" aria-label="Curve showing sex potential rising sharply as the fitness gap approaches zero">
+              <line class="axis" x1="62" y1="264" x2="474" y2="264"/>
+              <line class="axis" x1="62" y1="264" x2="62" y2="42"/>
+              <path class="trend" d="M80 52 C94 82, 112 125, 150 170 C208 223, 306 247, 454 256"/>
+              <path class="guide" d="M104 62 L104 258"/>
+              <text x="114" y="76" class="accent-text">near-critical regime</text>
+              <text x="215" y="300">fitness gap, S</text>
+              <text transform="translate(20 212) rotate(-90)">sex potential</text>
+            </svg>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-section">
+      <div class="wrap article-body">
+        <p class="eyebrow">Why the tail appears</p>
+        <h2>Criticality is derived, not assumed</h2>
+        <p>For two genic fitness differences ΔX and ΔY, define the total-fitness gap <em>U</em> = ΔX + ΔY and its magnitude <em>S</em> = |U|. Near <em>U</em> = 0, the two competing genomes are nearly neutral in total fitness even though their component fitnesses can differ substantially.</p>
+        <p>That near-cancellation slows the selective episode. In the manuscript’s kernel representation, the sex potential behaves asymptotically like a constant times W²/|U|. If the density of evolutionary paths remains non-zero near U = 0, the probability of landing very close to that cancellation surface is proportional to its width. Combining those two facts produces the inverse tail P(V &gt; v) ∼ 1/v.</p>
+        <p>The same small relaxation rate generates long temporal and spatial scales. With no dissociation, the temporal correlation length is proportional to 1/S and the spatial correlation length to 1/√S. Hence the corresponding tail laws t<sup>−1</sup> and x<sup>−2</sup>. Positive dissociation rate <em>r</em> imposes finite cutoffs: T ≤ 1/r and X ≤ √(D/r).</p>
+
+        <div class="plot-grid">
+          <figure class="plot-card">
+            <h4>Temporal correlations</h4>
+            <p>Sex-favoring episodes can persist for very long times.</p>
+            <svg viewBox="0 0 520 300" role="img" aria-label="Log-log temporal tail of slope minus one">
+              <line class="axis" x1="62" y1="244" x2="474" y2="244"/>
+              <line class="axis" x1="62" y1="244" x2="62" y2="42"/>
+              <path class="trend" d="M92 70 L438 222"/>
+              <text x="360" y="192" class="accent-text">t⁻¹</text>
+              <text x="238" y="280">log time</text>
+              <text transform="translate(20 200) rotate(-90)">log tail probability</text>
+            </svg>
+          </figure>
+          <figure class="plot-card">
+            <h4>Spatial correlations</h4>
+            <p>Local dispersal converts long relaxation times into scale-free spatial domains.</p>
+            <svg viewBox="0 0 520 300" role="img" aria-label="Log-log spatial tail of slope minus two">
+              <line class="axis" x1="62" y1="244" x2="474" y2="244"/>
+              <line class="axis" x1="62" y1="244" x2="62" y2="42"/>
+              <path class="trend" d="M92 58 L438 226"/>
+              <text x="360" y="190" class="accent-text">x⁻²</text>
+              <text x="235" y="280">log distance</text>
+              <text transform="translate(20 200) rotate(-90)">log tail probability</text>
+            </svg>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-section">
+      <div class="wrap article-body">
+        <p class="eyebrow">What survives coarse-graining</p>
+        <h2>Additive fitness becomes the large-scale currency</h2>
+        <p>A deliberately provocative part of the manuscript is its treatment of epistasis and other non-additive fitness effects. Many microevolutionary theories of sex depend critically on such details. Here, by contrast, the large-scale derivation is expressed in additive genic fitness components.</p>
+        <p>The manuscript argues that strong non-additive effects can be decisive along particular microevolutionary paths yet cancel when considered across an unbiased ensemble of paths. In renormalization language, they become <em>irrelevant</em> at scale unless there is a systematic large-scale bias making one sign of non-additivity more probable than the other. The additive component is what survives the coarse-graining and therefore controls the universal statistics.</p>
+        <p>This is not presented as a claim that epistasis is biologically absent or locally unimportant. It is a claim about explanatory scale: microscopic details can matter greatly for individual trajectories while contributing little to the ensemble-level law.</p>
+        <div class="callout"><p>At scale, the paper’s thesis is that collective near-neutrality beats individual strong selection: many small opportunities, integrated over many trajectories, can repeatedly overcome even large immediate costs.</p></div>
+      </div>
+    </section>
+
+    <section class="article-section">
+      <div class="wrap article-body">
+        <p class="eyebrow">Interpretation</p>
+        <h2>From a paradox of mechanisms to a statistical law</h2>
+        <p>The paper does not attempt to replace the classical explanations of sex. Instead, it proposes that Hill–Robertson interference, Fisher–Muller interference, clonal interference, and related mechanisms are different microscopic routes into a common large-scale structure.</p>
+        <p>Seen this way, the ubiquity of sex need not be explained by one universally dominant mechanism. The universal object is the path ensemble itself: selection for sex is non-negative in expectation, is punctuated by rare heavy-tailed surges, and possesses long temporal and spatial correlations. The associated criticality follows mathematically from the density of nearly neutral trajectories rather than from an assumed critical state.</p>
+        <p>The manuscript closes with a phase-transition analogy. A description of every molecule is not the natural explanation of melting; likewise, a catalogue of every microevolutionary advantage may not be the natural explanation of the prevalence of sex. At the appropriate scale, the claim is that the exceptional-looking phenomenon becomes a collective one.</p>
+        <div class="article-footer-links">
+          <a class="button" href="index.html">Return to homepage</a>
+          <a class="text-link" href="https://doi.org/10.1101/2020.08.28.271486">Read the bioRxiv preprint</a>
+        </div>
+        <p class="fineprint" style="margin-top:2rem;">This page summarizes the current manuscript supplied by the author; it is an explanatory guide, not a substitute for the paper's formal statements and proofs.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <p>Philip J. Gerrish</p>
+      <p>Sex emerges at scale</p>
+      <p class="footer-meta">Article summary</p>
+    </div>
+  </footer>
+</body>
+</html>
