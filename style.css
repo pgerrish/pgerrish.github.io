@@ -100,7 +100,7 @@ nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  width: min(54.6vw, 728px);
+  width: min(71vw, 946px);
   aspect-ratio: 4 / 3;
   background-image: url('phil-sketch-homepage.webp');
   background-size: cover;
@@ -393,7 +393,7 @@ blockquote {
 
 @media (max-width: 920px) {
   .hero-sketch {
-    width: min(106.6vw, 676px);
+    width: min(107vw, 676px);
     right: -1rem;
     top: 38%;
     opacity: .12;
